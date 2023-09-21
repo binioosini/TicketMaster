@@ -10,8 +10,8 @@ pragma solidity ^0.8.13;
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract TicketMaster is ERC721 {
-    uint256 public totalOccasions;
-    uint256 public totalSupply;
+    uint256 public totalOccasions;  // Total number of occasions listed
+    uint256 public totalSupply;     // Total number of tickets sold
 
     error notTheOwner();
     error idMustBeMoreThanZero();
@@ -28,16 +28,17 @@ contract TicketMaster is ERC721 {
         uint256 tickets;
         uint256 maxTickets;
         string name;
+        string imgUrl;
         string date;
         string time;
         string description;
         string location;
     }
 
-    mapping(uint256 => Occasion) occasions;
-    mapping(uint256 => mapping(address => bool)) public hasBought;
-    mapping(uint256 => mapping(uint256 => address)) public seatTaken;
-    mapping(uint256 => uint256[]) seatsTaken;
+    mapping(uint256 => Occasion) occasions;   // Mapping from occasion ID to Occasion struct
+    mapping(uint256 => mapping(address => bool)) public hasBought;   // Mapping to track if a user has bought a ticket for an occasion
+    mapping(uint256 => mapping(uint256 => address)) public seatTaken;  // Mapping to track which address occupies a seat for an occasion
+    mapping(uint256 => uint256[]) seatsTaken;  // Mapping to track seats that are currently taken for an occasion
 
 
     constructor(
@@ -49,6 +50,7 @@ contract TicketMaster is ERC721 {
         uint256 _cost,
         uint256 _maxTickets,
         string memory _name,
+        string memory _imgUrl,
         string memory _date,
         string memory _time,
         string memory _description,
@@ -62,6 +64,7 @@ contract TicketMaster is ERC721 {
             _maxTickets,
             _maxTickets,
             _name,
+            _imgUrl,
             _date,
             _time,
             _description,
@@ -69,8 +72,8 @@ contract TicketMaster is ERC721 {
         );
     }
 
-    // to get seat for
 
+    // Mint a ticket for an occasion and assign a seat
     function mint(uint256 _id, uint256 _seat) public payable {
         uint256 amount = occasions[_id].cost ;
 
