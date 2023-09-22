@@ -16,7 +16,6 @@ contract TicketMaster is ERC721 {
     error notTheOwner();
     error idMustBeMoreThanZero();
     error ethSentIsLessThanTheCost();
-    error withdrawFailed();
     error seatIsTaken();
     error seatIsNotExist();
     error faildToSendETHtoTheOccasionsOwner();
@@ -77,7 +76,7 @@ contract TicketMaster is ERC721 {
     function mint(uint256 _id, uint256 _seat) public payable {
         uint256 amount = occasions[_id].cost ;
 
-        if (_id == 0) {
+        if (_id <= 0) {
             revert idMustBeMoreThanZero();
         }
 
