@@ -9,13 +9,9 @@ contract DeployTicketMaster is Script {
     function run() external returns (TicketMaster, HelperConfig) {
         TicketMaster ticketMaster;
         HelperConfig helperConfig;
-        
-        helperConfig = new HelperConfig(); 
-        (
-            string memory name,
-            string memory symbol,
-            uint256 deployerKey
-        ) = helperConfig.activeNetworkConfig();
+
+        helperConfig = new HelperConfig();
+        (string memory name, string memory symbol, uint256 deployerKey) = helperConfig.activeNetworkConfig();
 
         vm.startBroadcast(deployerKey);
         ticketMaster = new TicketMaster (

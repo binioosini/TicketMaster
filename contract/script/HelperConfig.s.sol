@@ -12,8 +12,7 @@ contract HelperConfig is Script {
         uint256 deployerKey;
     }
 
-    uint256 public DEFAULT_ANVIL_PRIVATE_KEY =
-        0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80;
+    uint256 public DEFAULT_ANVIL_PRIVATE_KEY = 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80;
 
     constructor() {
         if (block.chainid == 11155111) {
@@ -23,26 +22,13 @@ contract HelperConfig is Script {
         }
     }
 
-    function getSepoliaEthConfig()
-        public
-        view
-        returns (NetworkConfig memory sepoliaNetworkConfig)
-    {
-        sepoliaNetworkConfig = NetworkConfig({
-            name:'TicketMaster',
-            symbol: 'TKM',
-            deployerKey: vm.envUint("PRIVATE_KEY")
-        });
+    function getSepoliaEthConfig() public view returns (NetworkConfig memory sepoliaNetworkConfig) {
+        sepoliaNetworkConfig =
+            NetworkConfig({name: "TicketMaster", symbol: "TKM", deployerKey: vm.envUint("PRIVATE_KEY")});
     }
 
-    function getOrCreateAnvilEthConfig()
-        public
-        returns (NetworkConfig memory anvilNetworkConfig)
-    {
-        anvilNetworkConfig = NetworkConfig({
-            name:'TicketMaster',
-            symbol: 'TKM',
-            deployerKey: DEFAULT_ANVIL_PRIVATE_KEY
-        });
+    function getOrCreateAnvilEthConfig() public returns (NetworkConfig memory anvilNetworkConfig) {
+        anvilNetworkConfig =
+            NetworkConfig({name: "TicketMaster", symbol: "TKM", deployerKey: DEFAULT_ANVIL_PRIVATE_KEY});
     }
 }

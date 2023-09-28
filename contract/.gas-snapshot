@@ -1,0 +1,7 @@
+TicketMasterTest:testGetOccasionFunction() (gas: 45780)
+TicketMasterTest:testGetSeatsTaken() (gas: 222232)
+TicketMasterTest:testMintFunction() (gas: 238418)
+TicketMasterTest:testRevertEthSentIsLessThanTheCost() (gas: 20384)
+TicketMasterTest:testRevertSeatIsNotExist() (gas: 24803)
+TicketMasterTest:testRevertSeatIsTaken() (gas: 228444)
+TicketMasterTest:testRevertidMustBeMoreThanZero() (gas: 20361)

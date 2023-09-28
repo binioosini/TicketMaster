@@ -10,8 +10,8 @@ pragma solidity ^0.8.13;
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract TicketMaster is ERC721 {
-    uint256 public totalOccasions;  // Total number of occasions listed
-    uint256 public totalSupply;     // Total number of tickets sold
+    uint256 public totalOccasions; // Total number of occasions listed
+    uint256 public totalSupply; // Total number of tickets sold
 
     error notTheOwner();
     error idMustBeMoreThanZero();
@@ -34,16 +34,12 @@ contract TicketMaster is ERC721 {
         string location;
     }
 
-    mapping(uint256 => Occasion) occasions;   // Mapping from occasion ID to Occasion struct
-    mapping(uint256 => mapping(address => bool)) public hasBought;   // Mapping to track if a user has bought a ticket for an occasion
-    mapping(uint256 => mapping(uint256 => address)) public seatTaken;  // Mapping to track which address occupies a seat for an occasion
-    mapping(uint256 => uint256[]) seatsTaken;  // Mapping to track seats that are currently taken for an occasion
+    mapping(uint256 => Occasion) occasions; // Mapping from occasion ID to Occasion struct
+    mapping(uint256 => mapping(address => bool)) public hasBought; // Mapping to track if a user has bought a ticket for an occasion
+    mapping(uint256 => mapping(uint256 => address)) public seatTaken; // Mapping to track which address occupies a seat for an occasion
+    mapping(uint256 => uint256[]) seatsTaken; // Mapping to track seats that are currently taken for an occasion
 
-
-    constructor(
-        string memory _name,
-        string memory _symbol
-    ) ERC721(_name, _symbol) {}
+    constructor(string memory _name, string memory _symbol) ERC721(_name, _symbol) {}
 
     function list(
         uint256 _cost,
@@ -71,10 +67,9 @@ contract TicketMaster is ERC721 {
         );
     }
 
-
     // Mint a ticket for an occasion and assign a seat
     function mint(uint256 _id, uint256 _seat) public payable {
-        uint256 amount = occasions[_id].cost ;
+        uint256 amount = occasions[_id].cost;
 
         if (_id <= 0) {
             revert idMustBeMoreThanZero();
@@ -93,7 +88,7 @@ contract TicketMaster is ERC721 {
         }
 
         // Send ETH to the occasion owner
-        (bool sent, ) = payable(occasions[_id].owner).call{value: amount }("");
+        (bool sent,) = payable(occasions[_id].owner).call{value: amount}("");
         if (!sent) {
             revert faildToSendETHtoTheOccasionsOwner();
         }
@@ -114,5 +109,4 @@ contract TicketMaster is ERC721 {
     function getSeatsTaken(uint256 _id) public view returns (uint256[] memory) {
         return seatsTaken[_id];
     }
-
 }

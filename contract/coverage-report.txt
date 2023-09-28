@@ -1,0 +1,227 @@
+Compiling 33 files with 0.8.21
+Solc 0.8.21 finished in 11.04s
+Compiler run successful with warnings:
+Warning (2018): Warning: Function state mutability can be restricted to view
+  --> script/HelperConfig.s.sol:38:5:
+   |
+38 |     function getOrCreateAnvilEthConfig()
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Analysing contracts...
+Running tests...
+Uncovered for script/DeployTicketMaster.s.sol:
+- Function "run" (location: source ID 29, line 9, chars 261-832, hits: 0)
+- Line (location: source ID 29, line 10, chars 333-358, hits: 0)
+- Statement (location: source ID 29, line 10, chars 333-358, hits: 0)
+- Line (location: source ID 29, line 11, chars 369-394, hits: 0)
+- Statement (location: source ID 29, line 11, chars 369-394, hits: 0)
+- Line (location: source ID 29, line 13, chars 415-448, hits: 0)
+- Statement (location: source ID 29, line 13, chars 415-448, hits: 0)
+- Line (location: source ID 29, line 14, chars 460-610, hits: 0)
+- Statement (location: source ID 29, line 14, chars 460-610, hits: 0)
+- Line (location: source ID 29, line 18, chars 576-610, hits: 0)
+- Statement (location: source ID 29, line 18, chars 576-610, hits: 0)
+- Line (location: source ID 29, line 20, chars 623-653, hits: 0)
+- Statement (location: source ID 29, line 20, chars 623-653, hits: 0)
+- Line (location: source ID 29, line 21, chars 664-747, hits: 0)
+- Statement (location: source ID 29, line 21, chars 664-747, hits: 0)
+- Line (location: source ID 29, line 25, chars 758-776, hits: 0)
+- Statement (location: source ID 29, line 25, chars 758-776, hits: 0)
+- Line (location: source ID 29, line 27, chars 789-824, hits: 0)
+- Statement (location: source ID 29, line 27, chars 789-824, hits: 0)
+
+Uncovered for script/HelperConfig.s.sol:
+- Function "getSepoliaEthConfig" (location: source ID 30, line 26, chars 660-970, hits: 0)
+- Line (location: source ID 30, line 31, chars 798-962, hits: 0)
+- Statement (location: source ID 30, line 31, chars 798-962, hits: 0)
+- Function "getOrCreateAnvilEthConfig" (location: source ID 30, line 38, chars 978-1276, hits: 0)
+- Line (location: source ID 30, line 42, chars 1106-1268, hits: 0)
+- Statement (location: source ID 30, line 42, chars 1106-1268, hits: 0)
+
+Uncovered for src/TicketMaster.sol:
+- Function "list" (location: source ID 31, line 48, chars 1664-2291, hits: 0)
+- Line (location: source ID 31, line 58, chars 1950-1966, hits: 0)
+- Statement (location: source ID 31, line 58, chars 1950-1966, hits: 0)
+- Line (location: source ID 31, line 59, chars 1977-2283, hits: 0)
+- Statement (location: source ID 31, line 59, chars 1977-2283, hits: 0)
+- Branch (branch: 4, path: 0) (location: source ID 31, line 97, chars 2979-3059, hits: 0)
+- Line (location: source ID 31, line 98, chars 3005-3047, hits: 0)
+- Statement (location: source ID 31, line 98, chars 3005-3047, hits: 0)
+
+Anchors for Contract "DeployTicketMaster" (solc 0.8.21+commit.d9974bed.Windows.msvc, source ID 29):
+- IC 63 -> Item 0
+  - Refers to item: Function "run" (location: source ID 29, line 9, chars 261-832, hits: 0)
+- IC 136 -> Item 1
+  - Refers to item: Line (location: source ID 29, line 10, chars 333-358, hits: 0)
+- IC 136 -> Item 2
+  - Refers to item: Statement (location: source ID 29, line 10, chars 333-358, hits: 0)
+- IC 138 -> Item 3
+  - Refers to item: Line (location: source ID 29, line 11, chars 369-394, hits: 0)
+- IC 138 -> Item 4
+  - Refers to item: Statement (location: source ID 29, line 11, chars 369-394, hits: 0)
+- IC 139 -> Item 5
+  - Refers to item: Line (location: source ID 29, line 13, chars 415-448, hits: 0)
+- IC 139 -> Item 6
+  - Refers to item: Statement (location: source ID 29, line 13, chars 415-448, hits: 0)
+- IC 185 -> Item 7
+  - Refers to item: Line (location: source ID 29, line 14, chars 460-610, hits: 0)
+- IC 185 -> Item 8
+  - Refers to item: Statement (location: source ID 29, line 14, chars 460-610, hits: 0)
+- IC 190 -> Item 9
+  - Refers to item: Line (location: source ID 29, line 18, chars 576-610, hits: 0)
+- IC 190 -> Item 10
+  - Refers to item: Statement (location: source ID 29, line 18, chars 576-610, hits: 0)
+- IC 351 -> Item 11
+  - Refers to item: Line (location: source ID 29, line 20, chars 623-653, hits: 0)
+- IC 351 -> Item 12
+  - Refers to item: Statement (location: source ID 29, line 20, chars 623-653, hits: 0)
+- IC 461 -> Item 13
+  - Refers to item: Line (location: source ID 29, line 21, chars 664-747, hits: 0)
+- IC 461 -> Item 14
+  - Refers to item: Statement (location: source ID 29, line 21, chars 664-747, hits: 0)
+- IC 558 -> Item 15
+  - Refers to item: Line (location: source ID 29, line 25, chars 758-776, hits: 0)
+- IC 558 -> Item 16
+  - Refers to item: Statement (location: source ID 29, line 25, chars 758-776, hits: 0)
+- IC 655 -> Item 17
+  - Refers to item: Line (location: source ID 29, line 27, chars 789-824, hits: 0)
+- IC 655 -> Item 18
+  - Refers to item: Statement (location: source ID 29, line 27, chars 789-824, hits: 0)
+
+Anchors for Contract "HelperConfig" (solc 0.8.21+commit.d9974bed.Windows.msvc, source ID 30):
+- IC 184 -> Item 79
+  - Refers to item: Function "getSepoliaEthConfig" (location: source ID 30, line 26, chars 660-970, hits: 0)
+- IC 703 -> Item 80
+  - Refers to item: Line (location: source ID 30, line 31, chars 798-962, hits: 0)
+- IC 703 -> Item 81
+  - Refers to item: Statement (location: source ID 30, line 31, chars 798-962, hits: 0)
+- IC 92 -> Item 82
+  - Refers to item: Function "getOrCreateAnvilEthConfig" (location: source ID 30, line 38, chars 978-1276, hits: 0)
+- IC 253 -> Item 83
+  - Refers to item: Line (location: source ID 30, line 42, chars 1106-1268, hits: 0)
+- IC 253 -> Item 84
+  - Refers to item: Statement (location: source ID 30, line 42, chars 1106-1268, hits: 0)
+
+Anchors for Contract "TicketMaster" (solc 0.8.21+commit.d9974bed.Windows.msvc, source ID 31):
+- IC 906 -> Item 19
+  - Refers to item: Function "list" (location: source ID 31, line 48, chars 1664-2291, hits: 0)
+- IC 4644 -> Item 20
+  - Refers to item: Line (location: source ID 31, line 58, chars 1950-1966, hits: 0)
+- IC 4644 -> Item 21
+  - Refers to item: Statement (location: source ID 31, line 58, chars 1950-1966, hits: 0)
+- IC 4668 -> Item 22
+  - Refers to item: Line (location: source ID 31, line 59, chars 1977-2283, hits: 0)
+- IC 4668 -> Item 23
+  - Refers to item: Statement (location: source ID 31, line 59, chars 1977-2283, hits: 0)
+- IC 613 -> Item 24
+  - Refers to item: Function "mint" (location: source ID 31, line 76, chars 2357-3395, hits: 7)
+- IC 2194 -> Item 25
+  - Refers to item: Line (location: source ID 31, line 77, chars 2425-2461, hits: 7)
+- IC 2194 -> Item 26
+  - Refers to item: Statement (location: source ID 31, line 77, chars 2425-2461, hits: 7)
+- IC 2221 -> Item 27
+  - Refers to item: Line (location: source ID 31, line 79, chars 2479-2487, hits: 7)
+- IC 2221 -> Item 28
+  - Refers to item: Statement (location: source ID 31, line 79, chars 2479-2487, hits: 7)
+- IC 2229 -> Item 29
+  - Refers to item: Branch (branch: 0, path: 0) (location: source ID 31, line 79, chars 2475-2545, hits: 1)
+- IC 2278 -> Item 30
+  - Refers to item: Branch (branch: 0, path: 1) (location: source ID 31, line 79, chars 2475-2545, hits: 6)
+- IC 2229 -> Item 31
+  - Refers to item: Line (location: source ID 31, line 80, chars 2504-2533, hits: 1)
+- IC 2229 -> Item 32
+  - Refers to item: Statement (location: source ID 31, line 80, chars 2504-2533, hits: 1)
+- IC 2279 -> Item 33
+  - Refers to item: Line (location: source ID 31, line 83, chars 2561-2579, hits: 6)
+- IC 2279 -> Item 34
+  - Refers to item: Statement (location: source ID 31, line 83, chars 2561-2579, hits: 6)
+- IC 2287 -> Item 35
+  - Refers to item: Branch (branch: 1, path: 0) (location: source ID 31, line 83, chars 2557-2641, hits: 1)
+- IC 2336 -> Item 36
+  - Refers to item: Branch (branch: 1, path: 1) (location: source ID 31, line 83, chars 2557-2641, hits: 5)
+- IC 2287 -> Item 37
+  - Refers to item: Line (location: source ID 31, line 84, chars 2596-2629, hits: 1)
+- IC 2287 -> Item 38
+  - Refers to item: Statement (location: source ID 31, line 84, chars 2596-2629, hits: 1)
+- IC 2337 -> Item 39
+  - Refers to item: Line (location: source ID 31, line 87, chars 2657-2692, hits: 5)
+- IC 2337 -> Item 40
+  - Refers to item: Statement (location: source ID 31, line 87, chars 2657-2692, hits: 5)
+- IC 2337 -> Item 41
+  - Refers to item: Statement (location: source ID 31, line 87, chars 2682-2692, hits: 5)
+- IC 2457 -> Item 42
+  - Refers to item: Branch (branch: 2, path: 0) (location: source ID 31, line 87, chars 2653-2741, hits: 1)
+- IC 2506 -> Item 43
+  - Refers to item: Branch (branch: 2, path: 1) (location: source ID 31, line 87, chars 2653-2741, hits: 4)
+- IC 2457 -> Item 44
+  - Refers to item: Line (location: source ID 31, line 88, chars 2709-2729, hits: 1)
+- IC 2457 -> Item 45
+  - Refers to item: Statement (location: source ID 31, line 88, chars 2709-2729, hits: 1)
+- IC 2507 -> Item 46
+  - Refers to item: Line (location: source ID 31, line 91, chars 2757-2791, hits: 4)
+- IC 2507 -> Item 47
+  - Refers to item: Statement (location: source ID 31, line 91, chars 2757-2791, hits: 4)
+- IC 2536 -> Item 48
+  - Refers to item: Branch (branch: 3, path: 0) (location: source ID 31, line 91, chars 2753-2843, hits: 1)
+- IC 2585 -> Item 49
+  - Refers to item: Branch (branch: 3, path: 1) (location: source ID 31, line 91, chars 2753-2843, hits: 3)
+- IC 2536 -> Item 50
+  - Refers to item: Line (location: source ID 31, line 92, chars 2808-2831, hits: 1)
+- IC 2536 -> Item 51
+  - Refers to item: Statement (location: source ID 31, line 92, chars 2808-2831, hits: 1)
+- IC 2586 -> Item 52
+  - Refers to item: Line (location: source ID 31, line 96, chars 2898-2968, hits: 3)
+- IC 2586 -> Item 53
+  - Refers to item: Statement (location: source ID 31, line 96, chars 2898-2968, hits: 3)
+- IC 2588 -> Item 54
+  - Refers to item: Statement (location: source ID 31, line 96, chars 2914-2968, hits: 3)
+- IC 2748 -> Item 55
+  - Refers to item: Line (location: source ID 31, line 97, chars 2983-2988, hits: 3)
+- IC 2748 -> Item 56
+  - Refers to item: Statement (location: source ID 31, line 97, chars 2983-2988, hits: 3)
+- IC 2753 -> Item 57
+  - Refers to item: Branch (branch: 4, path: 0) (location: source ID 31, line 97, chars 2979-3059, hits: 0)
+- IC 2802 -> Item 58
+  - Refers to item: Branch (branch: 4, path: 1) (location: source ID 31, line 97, chars 2979-3059, hits: 3)
+- IC 2753 -> Item 59
+  - Refers to item: Line (location: source ID 31, line 98, chars 3005-3047, hits: 0)
+- IC 2753 -> Item 60
+  - Refers to item: Statement (location: source ID 31, line 98, chars 3005-3047, hits: 0)
+- IC 2803 -> Item 61
+  - Refers to item: Line (location: source ID 31, line 101, chars 3071-3095, hits: 3)
+- IC 2803 -> Item 62
+  - Refers to item: Statement (location: source ID 31, line 101, chars 3071-3095, hits: 3)
+- IC 2847 -> Item 63
+  - Refers to item: Line (location: source ID 31, line 102, chars 3129-3162, hits: 3)
+- IC 2847 -> Item 64
+  - Refers to item: Statement (location: source ID 31, line 102, chars 3129-3162, hits: 3)
+- IC 2952 -> Item 65
+  - Refers to item: Line (location: source ID 31, line 103, chars 3197-3231, hits: 3)
+- IC 2952 -> Item 66
+  - Refers to item: Statement (location: source ID 31, line 103, chars 3197-3231, hits: 3)
+- IC 3051 -> Item 67
+  - Refers to item: Line (location: source ID 31, line 104, chars 3257-3284, hits: 3)
+- IC 3051 -> Item 68
+  - Refers to item: Statement (location: source ID 31, line 104, chars 3257-3284, hits: 3)
+- IC 3109 -> Item 69
+  - Refers to item: Line (location: source ID 31, line 105, chars 3327-3340, hits: 3)
+- IC 3109 -> Item 70
+  - Refers to item: Statement (location: source ID 31, line 105, chars 3327-3340, hits: 3)
+- IC 3133 -> Item 71
+  - Refers to item: Line (location: source ID 31, line 107, chars 3353-3387, hits: 3)
+- IC 3133 -> Item 72
+  - Refers to item: Statement (location: source ID 31, line 107, chars 3353-3387, hits: 3)
+- IC 845 -> Item 73
+  - Refers to item: Function "getOccasion" (location: source ID 31, line 110, chars 3403-3515, hits: 2)
+- IC 3604 -> Item 74
+  - Refers to item: Line (location: source ID 31, line 111, chars 3486-3507, hits: 2)
+- IC 3604 -> Item 75
+  - Refers to item: Statement (location: source ID 31, line 111, chars 3486-3507, hits: 2)
+- IC 509 -> Item 76
+  - Refers to item: Function "getSeatsTaken" (location: source ID 31, line 114, chars 3523-3639, hits: 1)
+- IC 2083 -> Item 77
+  - Refers to item: Line (location: source ID 31, line 115, chars 3609-3631, hits: 1)
+- IC 2083 -> Item 78
+  - Refers to item: Statement (location: source ID 31, line 115, chars 3609-3631, hits: 1)
+
